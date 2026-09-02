@@ -187,6 +187,8 @@ function buildX64(): void {
         'dmg',
         'zip',
         '--x64',
+        '--publish',
+        'never',
       ],
       {
         cwd: projectRoot,
