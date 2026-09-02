@@ -8,6 +8,7 @@ files:
   - LICENSE
   - THIRD_PARTY_NOTICES.md
 mac:
+  icon: build/icon.icns
   category: public.app-category.utilities
   identity: null
   minimumSystemVersion: '13.0'
