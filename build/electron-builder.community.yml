@@ -1,0 +1,5 @@
+extends: build/electron-builder.base.yml
+directories:
+  output: release/community
+extraMetadata:
+  buildFlavor: community

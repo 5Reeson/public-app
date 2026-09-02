@@ -1,0 +1,2 @@
+This file deliberately has a WebP extension but contains plain text.
+It must appear in the import failure list and must never be added to the library.

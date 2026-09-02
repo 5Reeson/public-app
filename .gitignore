@@ -1,0 +1,53 @@
+node_modules/
+out/
+release/
+dist/
+coverage/
+.playwright-cli/
+
+# Manual acceptance may place real user images here; only commit the synthetic fixture.
+tests/manual-fixtures/*
+!tests/manual-fixtures/README.md
+!tests/manual-fixtures/broken-image.webp
+
+# Historical workspace credentials and generated test media. Never commit these.
+.phase0/
+.phase7/
+
+# Internal development reports and handoff notes are not part of the public repository.
+DEVELOPMENT_HANDOFF.md
+PHASE*.md
+design-qa.md
+
+# Local logs and environment files may contain account identifiers.
+*.log
+.env
+.env.*
+!.env.example
+
+.DS_Store
+
+# Local editor, browser-automation, and coding-agent state.
+.vscode/
+.idea/
+.playwright-mcp/
+.codex/
+.agents/
+
+# Local agent-session configuration; not part of the product.
+.claude/
+
+# Local registry credentials, signing identities, and provisioning files.
+.npmrc
+*.pem
+*.key
+*.p8
+*.p12
+*.cer
+*.crt
+*.mobileprovision
+
+# Databases created by local probes or fixtures must never contain real user data here.
+*.db
+*.sqlite
+*.sqlite3

@@ -1,0 +1,68 @@
+{
+  "name": "cn-memes-abroad",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A local-first desktop app for organizing Chinese stickers and sending them to WhatsApp",
+  "author": "5Reeson",
+  "license": "GPL-3.0-only",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/5Reeson/tudu-stickers.git"
+  },
+  "main": "out/main/index.js",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "npm run typecheck && electron-vite build",
+    "preview": "electron-vite preview",
+    "package:mac": "npm run package:mac:community",
+    "package:mac:community": "npm run build && electron-builder --config build/electron-builder.community.yml --mac --dir",
+    "package:mac:arm64": "npm run package:mac:community:arm64",
+    "package:mac:community:arm64": "node --import tsx scripts/sharp-x64-deps.ts clean && npm run build && electron-builder --config build/electron-builder.community.yml --mac dmg zip --arm64",
+    "package:mac:x64": "npm run package:mac:community:x64",
+    "package:mac:community:x64": "npm run build && node --import tsx scripts/sharp-x64-deps.ts build-x64 build/electron-builder.community.yml",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "postinstall": "patch-package"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "dependencies": {
+    "@dnd-kit/core": "6.3.1",
+    "@dnd-kit/sortable": "10.0.0",
+    "@dnd-kit/utilities": "3.2.2",
+    "@phosphor-icons/react": "2.1.10",
+    "@whiskeysockets/baileys": "7.0.0-rc14",
+    "fflate": "0.8.2",
+    "pino": "9.11.0",
+    "qrcode": "1.5.4",
+    "qrcode-terminal": "0.12.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "sharp": "0.35.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "22.15.3",
+    "@types/qrcode": "1.5.5",
+    "@types/qrcode-terminal": "0.12.2",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.4",
+    "@vitejs/plugin-react": "5.2.0",
+    "electron": "43.3.0",
+    "electron-builder": "26.15.3",
+    "electron-vite": "5.0.0",
+    "eslint": "10.0.0",
+    "patch-package": "8.0.1",
+    "prettier": "3.9.6",
+    "tsx": "4.21.0",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.66.0",
+    "vite": "7.3.6",
+    "vitest": "4.1.10"
+  }
+}

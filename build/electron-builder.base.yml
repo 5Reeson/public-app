@@ -1,0 +1,16 @@
+appId: com.cnmemesabroad.desktop
+productName: 图渡
+asar: true
+artifactName: ${name}-${version}-${arch}.${ext}
+files:
+  - out/**/*
+  - package.json
+  - LICENSE
+  - THIRD_PARTY_NOTICES.md
+mac:
+  category: public.app-category.utilities
+  identity: null
+  minimumSystemVersion: '13.0'
+  target:
+    - dmg
+    - zip
