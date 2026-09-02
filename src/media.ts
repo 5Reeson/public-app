@@ -46,7 +46,7 @@ export async function encryptMedia(
   const mac = createHmac('sha256', macKey).update(iv).update(encrypted).digest().subarray(0, 10)
   const encryptedWithMac = Buffer.concat([encrypted, mac])
 
-  const directory = join(tmpdir(), 'cn-memes-abroad-whatsapp')
+  const directory = join(tmpdir(), 'tudu-stickers-whatsapp')
   await mkdir(directory, { recursive: true, mode: 0o700 })
   await chmod(directory, 0o700)
   const encFilePath = join(directory, `${mediaType}-${randomBytes(10).toString('hex')}.enc`)

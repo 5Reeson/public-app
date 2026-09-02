@@ -94,7 +94,7 @@ export async function sendPreparedStickerPack(
   )
   const animated = pack.mediaKind === 'animated'
   const stickerPackMessage = proto.Message.StickerPackMessage.create({
-    stickerPackId: `com.cn-memes-abroad.${pack.id}`,
+    stickerPackId: `com.tudu-stickers.${pack.id}`,
     name: pack.name,
     publisher: pack.publisher,
     packDescription: 'Created locally with 图渡.',

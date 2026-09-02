@@ -1,7 +1,7 @@
-appId: com.cnmemesabroad.desktop
+appId: com.tudu-stickers.desktop
 productName: 图渡
 asar: true
-artifactName: ${name}-${version}-${arch}.${ext}
+artifactName: Tudu-${version}-${arch}.${ext}
 files:
   - out/**/*
   - package.json
