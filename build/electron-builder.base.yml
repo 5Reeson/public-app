@@ -15,3 +15,23 @@ mac:
   target:
     - dmg
     - zip
+dmg:
+  background: build/dmg-background.png
+  window:
+    width: 720
+    height: 460
+  iconSize: 88
+  iconTextSize: 13
+  contents:
+    - x: 140
+      y: 205
+      type: file
+    - x: 390
+      y: 205
+      type: link
+      path: /Applications
+    - x: 615
+      y: 205
+      type: file
+      path: build/fix-damaged-app.command
+      name: 打不开？双击修复.command
