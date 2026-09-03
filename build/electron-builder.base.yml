@@ -16,22 +16,23 @@ mac:
     - dmg
     - zip
 dmg:
+  title: ${productName} 安装 ${version}
   background: build/dmg-background.png
   window:
     width: 720
-    height: 460
-  iconSize: 88
+    height: 430
+  iconSize: 76
   iconTextSize: 13
   contents:
     - x: 140
-      y: 205
+      y: 120
       type: file
     - x: 390
-      y: 205
+      y: 120
       type: link
       path: /Applications
     - x: 615
-      y: 205
+      y: 120
       type: file
       path: build/fix-damaged-app.command
-      name: 打不开？双击修复.command
+      name: 提示已损坏时双击修复.command
